@@ -206,23 +206,42 @@ const formResult = document.getElementById("formResult");
 
 if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
+        // Use native submit when opening the file directly (file://) to avoid CORS fetch blocks.
+        const shouldUseAjax = window.location.protocol !== "file:";
+        if (!shouldUseAjax) return;
+
         e.preventDefault();
 
         const loaderBtn = document.getElementById("submitBtn");
-        const btnText = loaderBtn.querySelector("span");
-        const originalText = btnText.textContent;
+        const btnText = loaderBtn ? loaderBtn.querySelector("span") : null;
+        const originalText = btnText ? btnText.textContent : "Send Message";
 
         // "Sending..." state
-        btnText.textContent = "Sending...";
-        loaderBtn.disabled = true;
+        if (btnText) {
+            btnText.textContent = "Sending...";
+        }
+        if (loaderBtn) {
+            loaderBtn.disabled = true;
+        }
+
+        if (formResult) {
+            formResult.style.display = "none";
+            formResult.textContent = "";
+            formResult.classList.remove("success", "error");
+        }
 
         const formData = new FormData(contactForm);
-        const object = Object.fromEntries(formData);
+        const payload = Object.fromEntries(formData);
 
-        // Your Web3Forms Access Key
-        object.access_key = ""; // Insert target key here
-
-        const json = JSON.stringify(object);
+        if (!payload.access_key) {
+            if (formResult) {
+                formResult.textContent = "Web3Forms access key is missing.";
+                formResult.classList.add("error");
+            }
+            if (loaderBtn) loaderBtn.disabled = false;
+            if (btnText) btnText.textContent = originalText;
+            return;
+        }
 
         fetch("https://api.web3forms.com/submit", {
             method: "POST",
@@ -230,30 +249,43 @@ if (contactForm) {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
             },
-            body: json
+            body: JSON.stringify(payload)
         })
             .then(async (response) => {
-                let res = await response.json();
-                if (response.status == 200) {
-                    formResult.textContent = "Message sent successfully!";
-                    formResult.classList.add("success");
+                const res = await response.json();
+                if (response.ok && res.success) {
+                    if (formResult) {
+                        formResult.textContent = "Message sent successfully!";
+                        formResult.classList.add("success");
+                    }
                     contactForm.reset();
                 } else {
-                    formResult.textContent = res.message;
-                    formResult.classList.add("error");
+                    if (formResult) {
+                        formResult.textContent = res.message || "Unable to send message.";
+                        formResult.classList.add("error");
+                    }
                 }
             })
             .catch(error => {
                 console.log(error);
-                formResult.textContent = "Something went wrong!";
-                formResult.classList.add("error");
+                if (formResult) {
+                    formResult.textContent = "Something went wrong!";
+                    formResult.classList.add("error");
+                }
             })
             .then(function () {
-                loaderBtn.disabled = false;
-                btnText.textContent = originalText;
+                if (loaderBtn) {
+                    loaderBtn.disabled = false;
+                }
+                if (btnText) {
+                    btnText.textContent = originalText;
+                }
                 setTimeout(() => {
-                    formResult.style.display = "none";
-                    formResult.classList.remove("success", "error");
+                    if (formResult) {
+                        formResult.style.display = "none";
+                        formResult.classList.remove("success", "error");
+                        formResult.textContent = "";
+                    }
                 }, 6000);
             });
     });
