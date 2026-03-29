@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akash Gaur Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :root {
+            --brand: #1d7f3f;
+            --brand-dark: #166734;
+            --bg: #dfe4ea;
+            --text: #2d333d;
+            --muted: #626c7f;
+            --card: #ffffff;
+            --line: #d8dde6;
+            --section-bg: #e7ecf5;
+            --section-text: #1d7f3f;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .actions {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
+            padding: 12px;
+            background: #eef1f5;
+            border-bottom: 1px solid #d9dee6;
+        }
+
+        .action-btn {
+            border: 0;
+            border-radius: 9px;
+            padding: 10px 18px;
+            font: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            background: var(--brand);
+            color: #fff;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 6px 16px rgba(29, 127, 63, 0.25);
+        }
+
+        .action-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 18px rgba(29, 127, 63, 0.32);
+        }
+
+        .action-btn.secondary {
+            background: #253656;
+            box-shadow: 0 6px 16px rgba(37, 54, 86, 0.2);
+        }
+
+        .resume {
+            width: min(920px, calc(100% - 28px));
+            margin: 18px auto 22px;
+            background: var(--card);
+            padding: 18px 22px 24px;
+            box-shadow: 0 8px 25px rgba(34, 47, 66, 0.1);
+            border: 1px solid #d9dee6;
+        }
+
+        .name-banner {
+            background: transparent;
+            color: var(--brand-dark);
+            text-align: center;
+            padding: 10px 14px 14px;
+            font-size: 42px;
+            line-height: 1.05;
+            font-weight: 800;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .intro {
+            display: flex;
+            gap: 18px;
+            margin-top: 14px;
+        }
+
+        .photo {
+            width: 150px;
+            min-width: 150px;
+            border: 1px solid var(--line);
+            padding: 5px;
+            background: #f5f8fb;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 168px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .contact {
+            flex: 1;
+            min-width: 0;
+            border-top: 1px solid var(--line);
+            border-left: 1px solid var(--line);
+            border-right: 1px solid var(--line);
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-height: 41px;
+            border-bottom: 1px solid var(--line);
+            padding: 7px 11px;
+            font-size: 16px;
+            color: #354054;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-icon {
+            width: 22px;
+            text-align: center;
+            color: var(--brand);
+            font-size: 19px;
+            flex-shrink: 0;
+        }
+
+        .contact-row a {
+            color: #4e4b8a;
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .section {
+            margin-top: 12px;
+        }
+
+        .section-title {
+            background: var(--section-bg);
+            color: var(--section-text);
+            border-left: 5px solid var(--brand);
+            padding: 6px 10px;
+            font-size: 16px;
+            margin: 0 0 8px;
+            font-weight: 700;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .section-body {
+            font-size: 15px;
+            line-height: 1.65;
+            color: var(--text);
+        }
+
+        ul.clean {
+            margin: 0;
+            padding-left: 24px;
+        }
+
+        ul.clean li {
+            margin-bottom: 6px;
+        }
+
+        .section-body b {
+            font-weight: 700;
+        }
+
+        .cert-list {
+            margin: 0;
+            padding-left: 24px;
+            columns: 2;
+            column-gap: 20px;
+        }
+
+        .bottom-grid {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+
+        .left-col {
+            flex: 1.35;
+            min-width: 0;
+        }
+
+        .right-col {
+            flex: 0.95;
+            min-width: 0;
+        }
+
+        .project-item {
+            margin-bottom: 10px;
+        }
+
+        .project-item p {
+            margin: 2px 0 0;
+        }
+
+        .project-item a {
+            color: #4e4b8a;
+            text-decoration: none;
+        }
+
+        .small-note {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        @media (max-width: 760px) {
+            .resume {
+                padding: 14px;
+                margin-top: 12px;
+            }
+
+            .name-banner {
+                font-size: 30px;
+            }
+
+            .intro {
+                flex-direction: column;
+            }
+
+            .photo {
+                width: 160px;
+            }
+
+            .contact-row {
+                font-size: 14px;
+                min-height: 38px;
+            }
+
+            .cert-list {
+                columns: 1;
+            }
+
+            .bottom-grid {
+                flex-direction: column;
+            }
+
+            .section-title {
+                font-size: 15px;
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 8mm;
+        }
+
+        @media print {
+            body {
+                background: #fff;
+            }
+
+            .actions {
+                display: none;
+            }
+
+            .resume {
+                width: 100%;
+                margin: 0;
+                box-shadow: none;
+                border: 0;
+                padding: 0;
+            }
+
+            .action-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="actions">
+        <button class="action-btn" type="button" onclick="window.print()">Download PDF</button>
+        <a class="action-btn secondary" href="index.html">Back to Portfolio</a>
+    </div>
+
+    <div class="resume">
+        <div class="name-banner">AKASH GAUR</div>
+
+        <div class="intro">
+            <div class="photo">
+                <img src="./WhatsApp%20Image%202026-03-29%20at%201.13.45%20PM.jpeg" alt="Akash Gaur photo">
+            </div>
+
+            <div class="contact">
+                <div class="contact-row">
+                    <span class="contact-icon"><i class="ri-map-pin-2-fill" aria-hidden="true"></i></span>
+                    <span>Kaithauli, Mirzapur, Nizamabad, Azamgarh, UP</span>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-icon"><i class="ri-phone-fill" aria-hidden="true"></i></span>
+                    <span>9305553214</span>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-icon"><i class="ri-mail-fill" aria-hidden="true"></i></span>
+                    <span>akashgaur93055@gmail.com</span>
+                </div>
+                <div class="contact-row">
+                    <span class="contact-icon"><i class="ri-linkedin-box-fill" aria-hidden="true"></i></span>
+                    <a href="https://www.linkedin.com/in/akash-gaur-01411a289?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                        target="_blank" rel="noopener">linkedin.com/in/akash-gaur-01411a289</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Career Objective</h2>
+            <div class="section-body">
+                Aspiring Data Analytics and ML Engineer with a strong foundation in Python, Data Analysis, and Machine
+                Learning, eager to secure an internship or entry-level role to apply and expand technical skills in
+                data-driven projects.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="section-body">
+                <ul class="clean">
+                    <li><b>Web Development:</b> HTML and CSS</li>
+                    <li><b>Programming Languages:</b> Python, C++</li>
+                    <li><b>Core Concepts:</b> Data Analysis, Machine Learning (ML)</li>
+                    <li><b>Tools:</b> Pandas, NumPy, Jupyter</li>
+                    <li><b>Technology:</b> VS Code, Antigravity, Claude</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="section-body">
+                <ul class="clean">
+                    <li><b>Bachelor of Computer Applications (BCA):</b> Scope Global Skills University, Bhopal | 2025 - Present</li>
+                    <li><b>Intermediate (12th):</b> UP Board | 2025</li>
+                    <li><b>High School (10th):</b> UP Board | 2023</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Certifications</h2>
+            <div class="section-body">
+                <ul class="cert-list">
+                    <li>HTML and CSS Certification</li>
+                    <li>Python Certification</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bottom-grid">
+            <div class="left-col">
+                <div class="section">
+                    <h2 class="section-title">Projects and Interests</h2>
+                    <div class="section-body">
+                        <ul class="clean">
+                            <li>
+                                <div class="project-item">
+                                    <b>Student Management System</b>
+                                    <p>Developed a web-based student management system to handle academic records.</p>
+                                    <p class="small-note">Web: <a href="https://www.myeduvidhya.in/" target="_blank" rel="noopener">myeduvidhya.in</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="project-item">
+                                    <b>Counseling Website</b>
+                                    <p>Created a website providing career counselling and educational guidance.</p>
+                                    <p class="small-note">Web: <a href="https://www.myeduvidhya.in/" target="_blank" rel="noopener">myeduvidhya.in</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Languages</h2>
+                    <div class="section-body">
+                        <ul class="clean">
+                            <li>Hindi (Native)</li>
+                            <li>Hinglish</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-col">
+                <div class="section">
+                    <h2 class="section-title">Key Strengths</h2>
+                    <div class="section-body">
+                        <ul class="clean">
+                            <li>Logical Thinker</li>
+                            <li>Team Player</li>
+                            <li>Problem Solver</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

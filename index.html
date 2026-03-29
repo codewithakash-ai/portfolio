@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akash Gaur's Portfolio</title>
+    <!-- Modern Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- Remixicons for UI details -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LOADER -->
+    <div id="loader">
+        <h1 class="loader-text">AKASH</h1>
+        <div class="loader-bar"></div>
+    </div>
+
+
+    <!-- BACKGROUND DETAILS (Glowing Orbs) -->
+    <div class="mesh-bg"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+
+    <!-- FLOATING SOCIAL MEDIA BAR -->
+    <aside class="social-bar">
+        <div class="social-line"></div>
+        <a href="https://www.instagram.com/akashgaur9161?igsh=MXh5YWp3NnBodTE1Nw==" target="_blank" class="social-icon"
+            aria-label="Instagram">
+            <i class="ri-instagram-line"></i>
+            <span class="tooltip">Instagram</span>
+        </a>
+        <a href="https://www.linkedin.com/in/akash-gaur-01411a289?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            target="_blank" class="social-icon" aria-label="LinkedIn">
+            <i class="ri-linkedin-fill"></i>
+            <span class="tooltip">LinkedIn</span>
+        </a>
+        <a href="https://x.com/codewithakashAi" target="_blank" class="social-icon" aria-label="Twitter/X">
+            <i class="ri-twitter-x-line"></i>
+            <span class="tooltip">Twitter (X)</span>
+        </a>
+        <a href="https://github.com/codewithakash-ai" target="_blank" class="social-icon" aria-label="GitHub">
+            <i class="ri-github-fill"></i>
+            <span class="tooltip">GitHub</span>
+        </a>
+        <a href="https://tryhackme.com/adventofcyber25" target="_blank" class="social-icon" aria-label="TryHackMe">
+            <i class="ri-terminal-box-fill"></i>
+            <span class="tooltip">TryHackMe</span>
+        </a>
+        <a href="https://www.chess.com/member/cyber_01" target="_blank" class="social-icon" aria-label="Chess.com">
+            <span style="font-size:1.1rem;">♟️</span>
+            <span class="tooltip">Chess.com</span>
+        </a>
+        <div class="social-line"></div>
+    </aside>
+
+    <!-- HEADER -->
+    <header id="navbar">
+        <a href="#home" class="logo">AKKU<span class="accent">.</span></a>
+        <nav class="nav-links" aria-label="Main Navigation">
+            <a href="#home" class="nav-link-btn">Home</a>
+            <a href="#about" class="nav-link-btn">About</a>
+            <a href="#portfolio" class="nav-link-btn">My Journey</a>
+            <a href="#contact" class="nav-link-btn">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="home" class="hero section">
+            <div class="container hero-container">
+                <div class="hero-text" data-tilt data-tilt-max="3" data-tilt-speed="400">
+                    <p class="subtitle"><i class="ri-sparkling-fill"></i> Welcome to my universe</p>
+                    <h1 class="title">Hi, I'm <br><span class="gradient-text">Akash Gaur</span></h1>
+                    <h2 class="role">I am a <span id="typing"></span><span class="cursor-blink">|</span></h2>
+                    <p class="description">A curious & passionate BCA student specializing in AI/ML & Web Development,
+                        blending advanced algorithms with stunning user interfaces.</p>
+
+                    <div class="buttons">
+                        <a href="#portfolio" class="btn btn-primary"><span>Explore Work</span> <i
+                                class="ri-arrow-right-up-line"></i></a>
+                        <a href="resume.html" target="_blank" rel="noopener" class="btn btn-outline"><span>Resume</span></a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat"><span class="num">1+</span> Projects</div>
+                        <div class="stat"><span class="num">100%</span> Creative</div>
+                    </div>
+                </div>
+
+                <!-- MOBILE ONLY: Sticker Photo -->
+                <div class="mobile-sticker-wrap">
+                    <div class="mobile-sticker">
+                        <div class="sticker-bubble">Hi! I'm Akku 👋</div>
+                        <img src="./WhatsApp%20Image%202026-03-29%20at%201.13.45%20PM.jpeg"
+                            alt="Akash Gaur">
+                        <div class="sticker-tag"><i class="ri-sparkling-fill"></i>🚀🚀</div>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div class="glass-orb-back"></div>
+                    <div class="hero-image-container">
+                        <img src="./WhatsApp%20Image%202026-03-29%20at%201.13.45%20PM.jpeg"
+                            alt="Akash Gaur" class="hero-img">
+                        <div class="glass-panel floating-panel-1"><i class="ri-brain-line"></i> AI/ML Enthusiast</div>
+                        <div class="glass-panel floating-panel-2"><i class="ri-code-s-slash-fill"></i> Web Developer
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section reveal">
+            <div class="container">
+                <div class="section-header center">
+                    <p class="section-subtitle">Discover</p>
+                    <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card glass-card" data-tilt data-tilt-max="5">
+                        <div class="about-icon"><i class="ri-user-smile-line"></i></div>
+                        <h3>Who I Am</h3>
+                        <p>I am Akash Gaur, a passionate BCA student exploring how technology solves real-world
+                            problems. I build responsive websites and love working with data using Python, Pandas, and
+                            NumPy.</p>
+                    </div>
+                    <div class="about-card glass-card" data-tilt data-tilt-max="5">
+                        <div class="about-icon"><i class="ri-rocket-line"></i></div>
+                        <h3>My Vision</h3>
+                        <p>I aim to craft digital products that are not only highly functional and intelligent but also
+                            visually breathtaking. I believe in continuous learning, creativity, and building things
+                            that actually matter 🚀</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO SECTION -->
+        <section id="portfolio" class="section reveal">
+            <div class="container">
+                <div class="section-header center">
+                    <p class="section-subtitle">My Journey</p>
+                    <h2 class="section-title">Portfolio <span class="gradient-text">Showcase</span></h2>
+                    <div class="portfolio-tabs" style="margin-top: 30px;">
+                        <button class="tab-btn active" data-tab="project">PROJECT</button>
+                        <button class="tab-btn" data-tab="certificate">CERTIFICATE</button>
+                        <button class="tab-btn" data-tab="skill">SKILL</button>
+                    </div>
+                </div>
+
+                <div class="tab-content active" id="tab-project">
+                    <div class="projects-grid">
+                        <div class="project-card glass-card" data-tilt data-tilt-max="8">
+                            <div class="project-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80"
+                                    alt="Code" class="project-img">
+                                <div class="project-overlay">
+                                    <a href="#" class="view-btn"><i class="ri-external-link-line"></i></a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tech">HTML • CSS • Three.js</div>
+                                <h3>Premium 3D Portfolio</h3>
+                                <p>A highly interactive, 3D glassmorphism portfolio site showcasing modern web capabilities
+                                    and "Gen-Z" aesthetics.</p>
+                            </div>
+                        </div>
+                        <div class="project-card glass-card" data-tilt data-tilt-max="8">
+                            <div class="project-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80"
+                                    alt="EduVidhya Platform" class="project-img">
+                                <div class="project-overlay">
+                                    <a href="https://www.myeduvidhya.in/" target="_blank" class="view-btn"><i
+                                            class="ri-external-link-line"></i></a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tech">Web Management • Database</div>
+                                <h3>MyEduVidhya</h3>
+                                <p>A comprehensive student management system platform designed to deliver seamless,
+                                    accessible, and highly interactive institutional workflow effortlessly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tab-certificate">
+                    <div class="certificates-grid">
+                        <article class="certificate-card glass-card" data-tilt data-tilt-max="8">
+                            <button type="button" class="certificate-open-btn" aria-label="Open certificate in full view">
+                                <div class="certificate-img-wrapper">
+                                    <img src="./WhatsApp%20Image%202026-03-29%20at%203.09.30%20PM.jpeg"
+                                        alt="Akash Gaur Certificate" class="certificate-img">
+                                    <div class="certificate-overlay">
+                                        <i class="ri-zoom-in-line"></i>
+                                        <span>Tap to View Full</span>
+                                    </div>
+                                </div>
+                            </button>
+                            <div class="certificate-content">
+                                <div class="project-tech">CERTIFICATION</div>
+                                <h3>HTML and CSS Certificate</h3>
+                                <p>Verified certificate added to portfolio.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tab-skill">
+                    <div class="skills-grid">
+                        <div class="skill-card glass-card" data-tilt data-tilt-max="15">
+                            <i class="ri-html5-fill skill-icon"></i>
+                            <h4>Frontend</h4>
+                            <p>HTML, CSS, JS</p>
+                        </div>
+                        <div class="skill-card glass-card" data-tilt data-tilt-max="15">
+                            <i class="ri-database-2-fill skill-icon"></i>
+                            <h4>Data Science</h4>
+                            <p>Python, Pandas, NumPy, Matplotlib</p>
+                        </div>
+                        <div class="skill-card glass-card" data-tilt data-tilt-max="15">
+                            <i class="ri-braces-fill skill-icon"></i>
+                            <h4>Core</h4>
+                            <p>C++ Programming</p>
+                        </div>
+                        <div class="skill-card glass-card" data-tilt data-tilt-max="15">
+                            <i class="ri-brain-fill skill-icon"></i>
+                            <h4>AI/ML</h4>
+                            <p>Modeling, Intelligent Systems</p>
+                        </div>
+                        <div class="skill-card glass-card" data-tilt data-tilt-max="15">
+                            <i class="ri-quill-pen-fill skill-icon"></i>
+                            <h4>Design</h4>
+                            <p>UI/UX, Personal Branding</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATE LIGHTBOX -->
+        <div id="certificateLightbox" class="certificate-lightbox" aria-hidden="true">
+            <button id="certificateLightboxClose" class="certificate-lightbox-close" type="button"
+                aria-label="Close certificate preview">
+                <i class="ri-close-line"></i>
+            </button>
+            <img id="certificateLightboxImg" class="certificate-lightbox-img" alt="Certificate full preview">
+        </div>
+
+        <!-- CONNECT WITH ME SECTION -->
+        <section id="connect" class="section reveal">
+            <div class="container">
+                <div class="section-header center">
+                    <p class="section-subtitle"><i class="ri-links-line"></i> Stay Connected</p>
+                    <h2 class="section-title">Find Me <span class="gradient-text">Everywhere</span></h2>
+                    <p class="connect-desc">Let's connect across the digital universe. Follow, subscribe, and let's
+                        build something extraordinary together.</p>
+                </div>
+
+                <div class="connect-grid">
+                    <!-- Instagram Card -->
+                    <a href="https://www.instagram.com/akashgaur9161?igsh=MXh5YWp3NnBodTE1Nw==" target="_blank"
+                        class="connect-card connect-insta" data-tilt data-tilt-max="12">
+                        <div class="connect-glow"></div>
+                        <div class="connect-icon"><i class="ri-instagram-line"></i></div>
+                        <h3>Instagram</h3>
+                        <p>@akashgaur</p>
+                    </a>
+
+                    <!-- LinkedIn Card -->
+                    <a href="https://www.linkedin.com/in/akash-gaur-01411a289?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                        target="_blank" class="connect-card connect-linkedin" data-tilt data-tilt-max="12">
+                        <div class="connect-glow"></div>
+                        <div class="connect-icon"><i class="ri-linkedin-fill"></i></div>
+                        <h3>LinkedIn</h3>
+                        <p>akashgaur</p>
+                    </a>
+
+                    <!-- X / Twitter Card -->
+                    <a href="https://x.com/codewithakashAi" target="_blank" class="connect-card connect-x" data-tilt
+                        data-tilt-max="12">
+                        <div class="connect-glow"></div>
+                        <div class="connect-icon"><i class="ri-twitter-x-line"></i></div>
+                        <h3>X (Twitter)</h3>
+                        <p>@akashgaur</p>
+                    </a>
+
+                    <!-- GitHub Card -->
+                    <a href="https://github.com/codewithakash-ai" target="_blank" class="connect-card connect-github"
+                        data-tilt data-tilt-max="12">
+                        <div class="connect-glow"></div>
+                        <div class="connect-icon"><i class="ri-github-fill"></i></div>
+                        <h3>GitHub</h3>
+                        <p>akashgaur</p>
+                    </a>
+
+                    <!-- TryHackMe Card -->
+                    <a href="https://tryhackme.com/adventofcyber25" target="_blank" class="connect-card connect-thm"
+                        data-tilt data-tilt-max="12">
+                        <div class="connect-glow"></div>
+                        <div class="connect-icon"><i class="ri-terminal-box-fill"></i></div>
+                        <h3>TryHackMe</h3>
+                        <p>akashgaur</p>
+                    </a>
+
+                    <!-- Chess.com Card -->
+                    <a href="https://www.chess.com/member/cyber_01" target="_blank" class="connect-card connect-chess"
+                        data-tilt data-tilt-max="12">
+                        <div class="connect-glow"></div>
+                        <div class="connect-icon" style="font-size:2rem;">♟️</div>
+                        <h3>Chess.com</h3>
+                        <p>akashgaur</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section reveal">
+            <div class="container">
+                <div class="contact-box glass-card" data-tilt data-tilt-max="3">
+                    <div class="contact-info">
+                        <h2>Let's create something <span class="gradient-text">amazing</span></h2>
+                        <p>Have an idea or a project? Just send a message and let's get talking!</p>
+                        <div class="contact-methods">
+                            <div class="method"><i class="ri-mail-send-line"></i> akashgaur93055@gmail.com</div>
+                            <div class="method"><i class="ri-map-pin-line"></i> India</div>
+                        </div>
+                    </div>
+                    <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <div class="input-group">
+                            <input type="text" id="name" name="name" placeholder=" " required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" name="email" placeholder=" " required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" id="submitBtn" class="btn btn-primary submit-btn">
+                            <span>Send Message</span> <i class="ri-send-plane-fill"></i>
+                        </button>
+                        <div id="formResult" class="form-result"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h2>AKKU<span class="accent">.</span></h2>
+                    <p>Building the Vision</p>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/akashgaur9161?igsh=MXh5YWp3NnBodTE1Nw==" target="_blank"><i
+                            class="ri-instagram-line"></i></a>
+                    <a href="https://www.linkedin.com/in/akash-gaur-01411a289?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                        target="_blank"><i class="ri-linkedin-fill"></i></a>
+                    <a href="https://x.com/codewithakashAi" target="_blank"><i class="ri-twitter-x-line"></i></a>
+                    <a href="https://github.com/codewithakash-ai" target="_blank"><i class="ri-github-fill"></i></a>
+                    <a href="https://tryhackme.com/adventofcyber25" target="_blank"><i
+                            class="ri-terminal-box-fill"></i></a>
+                    <a href="https://www.chess.com/member/cyber_01" target="_blank" style="font-size:1.1rem;">♟️</a>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-copy">© 2026 Akash Gaur. All rights reserved. Designed with <i class="ri-heart-fill"
+                    style="color: var(--accent-3);"></i></p>
+        </div>
+    </footer>
+
+    <!-- VanillaTilt for 3D interactions -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
