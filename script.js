@@ -73,42 +73,6 @@ window.addEventListener("scroll", () => {
     }
 });
 
-
-
-// WELCOME AUDIO ON LOAD
-window.addEventListener("load", () => {
-    let hasPlayed = false;
-
-    const playWelcomeAudio = () => {
-        if (hasPlayed) return;
-
-        const msg = new SpeechSynthesisUtterance("Welcome to the Akku universe.");
-        msg.rate = 0.9;
-        msg.pitch = 1;
-        msg.volume = 1;
-
-        msg.onstart = () => {
-            hasPlayed = true;
-        };
-
-        window.speechSynthesis.speak(msg);
-    };
-
-    // Try playing immediately (might be blocked by browser autoplay policies)
-    setTimeout(playWelcomeAudio, 500);
-
-    // Fallback: Play on first interaction if autoplay was blocked
-    const interactionEvents = ["click", "keydown", "touchstart"];
-    const onInteraction = () => {
-        if (!hasPlayed) {
-            playWelcomeAudio();
-        }
-        interactionEvents.forEach(evt => document.removeEventListener(evt, onInteraction));
-    };
-
-    interactionEvents.forEach(evt => document.addEventListener(evt, onInteraction));
-});
-
 // PORTFOLIO TABS
 const tabBtns = document.querySelectorAll('.tab-btn');
 const tabContents = document.querySelectorAll('.tab-content');
